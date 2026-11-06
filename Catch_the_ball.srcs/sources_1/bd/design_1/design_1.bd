@@ -1,0 +1,374 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xE1ACA473E5DA2D52",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../Catch_the_ball.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "clk_wiz_0": "",
+      "top_game_0": "",
+      "rgb2dvi_0": "",
+      "xlconcat_0": "",
+      "xlconstant_0": ""
+    },
+    "interface_ports": {
+      "TMDS_0": {
+        "mode": "Master",
+        "vlnv_bus_definition": "digilentinc.com:interface:tmds:1.0",
+        "vlnv": "digilentinc.com:interface:tmds_rtl:1.0",
+        "hdl_attributes": {
+          "LOCKED": {
+            "value": "FALSE",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_P": {
+            "physical_name": "TMDS_0_clk_p",
+            "direction": "O"
+          },
+          "CLK_N": {
+            "physical_name": "TMDS_0_clk_n",
+            "direction": "O"
+          },
+          "DATA_P": {
+            "physical_name": "TMDS_0_data_p",
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "DATA_N": {
+            "physical_name": "TMDS_0_data_n",
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "ports": {
+      "clk_in1_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_in1_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "50000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "switch_left_0": {
+        "direction": "I"
+      },
+      "switch_right_0": {
+        "direction": "I"
+      },
+      "rst_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      }
+    },
+    "components": {
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "17",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "xci_path": "ip\\design_1_clk_wiz_0_0\\design_1_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "200.0"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "750.109"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "908.603"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "25.200"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "598.350"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "908.603"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "126.000"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "63.000"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "20.000"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.0"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "25.000"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "5"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "5"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "2"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "50.000"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "top_game_0": {
+        "vlnv": "xilinx.com:module_ref:top_game:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_top_game_0_0",
+        "xci_path": "ip\\design_1_top_game_0_0\\design_1_top_game_0_0.xci",
+        "inst_hier_path": "top_game_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "top_game",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_25MHz": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "25200000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "switch_left": {
+            "direction": "I"
+          },
+          "switch_right": {
+            "direction": "I"
+          },
+          "VGA_R": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "VGA_G": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "VGA_B": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "VGA_HS": {
+            "direction": "O"
+          },
+          "VGA_VS": {
+            "direction": "O"
+          },
+          "VGA_DE": {
+            "direction": "O"
+          }
+        }
+      },
+      "rgb2dvi_0": {
+        "vlnv": "digilentinc.com:ip:rgb2dvi:1.4",
+        "ip_revision": "8",
+        "xci_name": "design_1_rgb2dvi_0_0",
+        "xci_path": "ip\\design_1_rgb2dvi_0_0\\design_1_rgb2dvi_0_0.xci",
+        "inst_hier_path": "rgb2dvi_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "kGenerateSerialClk": {
+            "value": "false"
+          }
+        }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "ip_revision": "7",
+        "xci_name": "design_1_xlconcat_0_0",
+        "xci_path": "ip\\design_1_xlconcat_0_0\\design_1_xlconcat_0_0.xci",
+        "inst_hier_path": "xlconcat_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "NUM_PORTS": {
+            "value": "3"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "10",
+        "xci_name": "design_1_xlconstant_0_0",
+        "xci_path": "ip\\design_1_xlconstant_0_0\\design_1_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "rgb2dvi_0_TMDS": {
+        "interface_ports": [
+          "TMDS_0",
+          "rgb2dvi_0/TMDS"
+        ]
+      }
+    },
+    "nets": {
+      "clk_in1_0_1": {
+        "ports": [
+          "clk_in1_0",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "top_game_0/clk_25MHz",
+          "rgb2dvi_0/PixelClk"
+        ]
+      },
+      "clk_wiz_0_clk_out2": {
+        "ports": [
+          "clk_wiz_0/clk_out2",
+          "rgb2dvi_0/SerialClk"
+        ]
+      },
+      "rst_0_1": {
+        "ports": [
+          "rst_0",
+          "top_game_0/rst"
+        ]
+      },
+      "switch_left_0_1": {
+        "ports": [
+          "switch_left_0",
+          "top_game_0/switch_left"
+        ]
+      },
+      "switch_right_0_1": {
+        "ports": [
+          "switch_right_0",
+          "top_game_0/switch_right"
+        ]
+      },
+      "top_game_0_VGA_B": {
+        "ports": [
+          "top_game_0/VGA_B",
+          "xlconcat_0/In1"
+        ]
+      },
+      "top_game_0_VGA_DE": {
+        "ports": [
+          "top_game_0/VGA_DE",
+          "rgb2dvi_0/vid_pVDE"
+        ]
+      },
+      "top_game_0_VGA_G": {
+        "ports": [
+          "top_game_0/VGA_G",
+          "xlconcat_0/In2"
+        ]
+      },
+      "top_game_0_VGA_HS": {
+        "ports": [
+          "top_game_0/VGA_HS",
+          "rgb2dvi_0/vid_pHSync"
+        ]
+      },
+      "top_game_0_VGA_R": {
+        "ports": [
+          "top_game_0/VGA_R",
+          "xlconcat_0/In0"
+        ]
+      },
+      "top_game_0_VGA_VS": {
+        "ports": [
+          "top_game_0/VGA_VS",
+          "rgb2dvi_0/vid_pVSync"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "rgb2dvi_0/vid_pData"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "rgb2dvi_0/aRst"
+        ]
+      }
+    }
+  }
+}
